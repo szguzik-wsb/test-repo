@@ -1,0 +1,19 @@
+1. Program w terminalu
+2. Temat: Biblioteka
+3. Wymagania
+    - lista ksiażek (min. 25)
+        - autor
+        - tytul
+        - rok wydania
+        - Ilosc stron
+        - Ilosc danej ksiazki
+    - Dodawanie pozycji
+    - Edycja pozycji
+    - Usuwanie pozycji    
+    - Nie mozna wypozyczyc wiecej niz 5 ksiazek
+    - Lista studentow (tez maxymalnie 15)
+    - Modul przypomnienia o zwrocie ksiazek (jakas forma raportu - w terminalu)
+4. Oddajemy prace na repozytorium 
+5. Pierwszy termin - 2025-06-07
+6. Drugi termin - tak jak ustali uczelnia
+
