@@ -54,3 +54,26 @@ np. git revert --hard 09gdf09gdf7gd90g7d09fg
 git revert: Stwórz nowy commit, który odwraca zmiany z innego commitu, ale zachowuje historię.
 git reset --hard: Wróć do wcześniejszego commitu, usuwając commity i ich historię.
 
+// Jeśli masz w trakcie jakieś niezakommitowane zmiany i chcesz je tymczasowo schować
+git stash
+
+// Aby zobaczyć listę wszystkich zapisanych zmian:
+git stash list
+
+// Jeśli chcesz przywrócić zmiany z ostatniego schowka
+git stash apply
+
+// Aby przywrócić zmiany z konkretnego schowka
+git stash apply stash@{n}
+
+// Jeśli chcesz przywracać konkretny schowek:
+git stash pop stash@{n}
+
+// Jeśli chcesz usunąć konkretny schowek bez przywracania zmian:
+git stash drop stash@{n}
+
+// Jeśli chcesz wyczyścić całą listę schowków
+git stash clear
+
+// Jeśli chcesz dodać krótki opis do Twojego schowka:
+git stash save "wiadomość"
