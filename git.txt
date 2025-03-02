@@ -31,7 +31,6 @@ git push origin main
 git remote -v
 // Polecenie do generowania klucza ssh
  ssh-keygen
-
-
-
- ## git remote set-url origin git@github.com:szguzik-wsb/test-repo.git - omowimy pozniej 
+// Zmiana adresu repozytorium
+git remote set-url origin {newurl}
+np. git remote set-url origin git@github.com:szguzik-wsb/test-repo.git
