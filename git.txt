@@ -84,3 +84,4 @@ git stash clear
 
 // Jeśli chcesz dodać krótki opis do Twojego schowka:
 git stash save "wiadomość"
+git stash push -m "wiadomość"
