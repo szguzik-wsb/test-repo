@@ -53,3 +53,4 @@ np. git revert --hard 09gdf09gdf7gd90g7d09fg
 //:::::::::::::::Porównanie:::::::::::::::
 git revert: Stwórz nowy commit, który odwraca zmiany z innego commitu, ale zachowuje historię.
 git reset --hard: Wróć do wcześniejszego commitu, usuwając commity i ich historię.
+
