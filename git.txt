@@ -38,3 +38,18 @@ np. git remote set-url origin git@github.com:szguzik-wsb/test-repo.git
 git branch develop
 // Połaczenie zmian z galezi lokalnej do main, ktory rowniez jest zdalny
 git merge develop
+// Tworzy nowy commit, który odwraca zmiany wprowadzone przez commit o podanym HASH
+// Jest to bezpieczna metoda bo nie modyfikuje historii
+git revert HASH
+np. git revert 09gdf09gdf7gd90g7d09fg
+
+// Cofanie kilku commitów 
+git revert OLDEST_HASH^..NEWEST_HASH
+np. git revert a6b4c97e5c807d1f6003d7d920ca7ddc5c1adc32^..9f6e687b020586e2c3d0212c11e57a02e39d1f16
+// Dodanie flagi --hard - przywróci stan repozytorium do "momentu" wskazanego commita
+// Nie jest to zalecana metoda ponieważ usuwa historię
+git revert --hard HASH
+np. git revert --hard 09gdf09gdf7gd90g7d09fg
+//:::::::::::::::Porównanie:::::::::::::::
+git revert: Stwórz nowy commit, który odwraca zmiany z innego commitu, ale zachowuje historię.
+git reset --hard: Wróć do wcześniejszego commitu, usuwając commity i ich historię.
