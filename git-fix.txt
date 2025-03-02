@@ -1,0 +1,98 @@
+KONFIGURACJA UŻYTKOWNIKA GITA
+---------------------------------------------
+
+# Ustawianie nazwy użytkownika oraz adresu email
+git config --global user.name "Jan Kowalski"
+git config --global user.email "youremail@domain.com"
+
+
+# Inicjalizacja repozytorium
+git init
+
+
+# Dodaje do indexu wszystkie nowe, zmienione, usunięte pliki w bieżącym katalogu i wszystkich jego podkatalogach
+git add .  
+
+# Dodaje do indexu wszystkie nowe, zmienione, usunięte pliki w całym repozytorium
+git add -A
+
+# Zatwierdza zmiany opisane wiadomością "first commit" - oczywiście treść wiadomości można dowolnie modyfikować
+git commit -m "first commit"
+
+
+# Zmienia nazwę bieżącej gałęzi na "main". Flaga -M nadpisuje gałąź o nazwie main
+git branch -M main
+
+# Dodaje zdalne repozytorium o nazwie "origin" z adresem URL
+# origin - jest "umownym" słowem
+# Projekt może posiadać więcej niż jedno repozytorium.
+# Rozróżniamy je za pomocą nazwy (np. origin i origin2)
+# !!! ADRES REPOZYTORIUM NALEŻY PODMIENIĆ !!! 
+git remote add origin http://github.com/szguzik/empty-project.git
+git remote add origin2 http://github.com/szguzik/empty-project-2.git
+git remote add origin http://szguzik@github.com/szguzik/empty-project.git
+git remote add origin git@github.com:szguzik-wsb/test-repo.git
+
+# Polecenie do przesyłania/wypychania zmian na zdalny branch main
+git push origin main
+
+# Sprawdzanie jakie sa zdalne repozytoria wraz z adresami
+git remote -v
+
+# Polecenie do generowania klucza ssh
+ssh-keygen
+
+# Zmiana adresu repozytorium
+git remote set-url origin git@github.com:szguzik-wsb/test-repo.git
+
+# Tworzy nową gałąź o nazwie "develop", ale nie przełącza się na nią
+git branch develop
+
+# Połączenie zmian z gałęzi lokalnej do main, który również jest zdalny
+git merge develop
+
+# Tworzy nowy commit, który odwraca zmiany wprowadzone przez commit o podanym HASH
+# Jest to bezpieczna metoda, bo nie modyfikuje historii
+git revert HASH
+# Przykład:
+git revert 09gdf09gdf7gd90g7d09fg
+
+# Cofanie kilku commitów
+git revert OLDEST_HASH^..NEWEST_HASH
+# Przykład:
+git revert a6b4c97e5c807d1f6003d7d920ca7ddc5c1adc32^..9f6e687b020586e2c3d0212c11e57a02e39d1f16
+
+# Dodanie flagi --hard - przywróci stan repozytorium do "momentu" wskazanego commita
+# Nie jest to zalecana metoda ponieważ usuwa historię
+git reset --hard HASH
+# Przykład:
+git reset --hard 09gdf09gdf7gd90g7d09fg
+
+#:::::::::::::::Porównanie:::::::::::::::
+# git revert: Stwórz nowy commit, który odwraca zmiany z innego commitu, ale zachowuje historię.
+# git reset --hard: Wróć do wcześniejszego commitu, usuwając commity i ich historię.
+
+
+# Jeśli masz w trakcie jakieś niezakommitowane zmiany i chcesz je tymczasowo schować
+git stash
+
+# Aby zobaczyć listę wszystkich zapisanych zmian:
+git stash list
+
+# Jeśli chcesz przywrócić zmiany z ostatniego schowka
+git stash apply
+
+# Aby przywrócić zmiany z konkretnego schowka
+git stash apply stash@{n}
+
+# Jeśli chcesz przywracać konkretny schowek:
+git stash pop stash@{n}
+
+# Jeśli chcesz usunąć konkretny schowek bez przywracania zmian:
+git stash drop stash@{n}
+
+# Jeśli chcesz wyczyścić całą listę schowków
+git stash clear
+
+# Jeśli chcesz dodać krótki opis do Twojego schowka:
+git stash push -m "wiadomość"
