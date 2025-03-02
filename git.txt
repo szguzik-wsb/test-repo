@@ -1,3 +1,10 @@
+KONFIGURACJA UŻYTKOWNIKA GITA
+---------------------------------------------
+// Ustawianie nazwy użytkownika oraz adresu email
+git config --global user.name "Jan Kowalski"
+git config --global user.email "youremail@domain.com"
+
+
 // Inicjalizacja repozytorium
 git init
 
