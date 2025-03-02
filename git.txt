@@ -34,3 +34,5 @@ git remote -v
 // Zmiana adresu repozytorium
 git remote set-url origin {newurl}
 np. git remote set-url origin git@github.com:szguzik-wsb/test-repo.git
+// Tworzy nową gałąź o nazwie "develop", ale nie przełącza się na nią.
+git branch develop
