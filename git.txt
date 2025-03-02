@@ -27,3 +27,5 @@ git remote add origin http://szguzik@github.com/szguzik/empty-project.git
 git remote add origin git@github.com:szguzik-wsb/test-repo.git
 // Polecenie do przesyłania/wypychania zmian na zdalny branch main 
 git push origin main
+// Sprawdzanie jakie sa zdalne repozytoria wraz z adresami
+git remote -v
